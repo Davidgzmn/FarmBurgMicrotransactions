@@ -59,7 +59,7 @@ percent_at_4_99 = clients_at_4_99/weekly_customers
 
 #we are determining if the amount of purchases we need per customer at price points
 #exceeds the percent of people who purchased at that given price point
-pvalA = binom_test(groupA_purchases, n=1666, p=percent_at_99)
+pvalA = binom_test(groupA_purchases, n=(groupA_purchases+groupA_no_purchase), p=percent_at_99)
 print(pvalA)
 
 pvalB = binom_test(groupB_purchases, n=(groupB_purchases+groupB_no_purchase), p=percent_at_1_99)
