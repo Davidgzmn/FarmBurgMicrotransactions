@@ -41,18 +41,22 @@ print(pval)
 
 #Get the complete amount of users
 weekly_customers = len(df)
+print("Weekly customers: {0}").format(weekly_customers)
 
 #Calculate how many people we need at each price point to get $1000 a week
 #which is the value we set as the worth-it point for using a certain ad
 #also determine the percent of total customers that amount would reprecent
 clients_at_99 = 1000/.99
 percent_at_99 = clients_at_99/weekly_customers
+print("Percent at 99: {0}").format(percent_at_99)
 
 clients_at_1_99 = 1000/1.99
 percent_at_1_99 = clients_at_1_99/weekly_customers
+print("Percent at 1.99: {0}").format(percent_at_1_99)
 
 clients_at_4_99 = 1000/4.99
 percent_at_4_99 = clients_at_4_99/weekly_customers
+print("Percent at 4.99: {0}").format(percent_at_4_99)
 
 #We use a binomial test determine if there is a difference between the results
 #and the needed values
